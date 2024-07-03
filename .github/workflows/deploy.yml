@@ -1,22 +1,30 @@
 name: Github Action 실행
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      
+main
 
 jobs:
-  My-Deploy-Job:
+  #아래 이름은 그냥 제목같은거 
+  My-Deploy-jab:
     runs-on: ubuntu-latest
 
-
     steps:
-        - name: hello world 찍기
-            run: echo "hello world"
+      # name은 역시 제목
+      
+name: hello world 찍기
+      run: echo "hello world"
 
+      
+name: 여러 명령어 실행
+      run: |
+        echo "hello world!!"
+        echo "good!!!"
 
-                - name: 여러명령어 실행
-                    run: |
-                    echo "hello world!!!"
-                    echo "good !!!!"
-                    echo "push !!!!"
+name: github action 변수
+run: |
+    echo $GITHUB_SHA
+    echo $GITHUB_REPOSITORY
+
